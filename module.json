@@ -1,0 +1,7 @@
+{
+	"name": "Kantoku",
+	"slug": "kantoku",
+	"version": "1.0",
+	"description": "Module Manager for Rakko.",
+	"enabled": true
+}
