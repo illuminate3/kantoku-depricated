@@ -35,6 +35,11 @@ class ModuleSeeder extends Seeder {
 			'position'				=> 7,
 		]);
 
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulinks')->insert( $link_names );
+		}
+
 		$last_insert_id = DB::getPdo()->lastInsertId();
 		$locale_id = DB::table('locales')
 			->where('name', '=', 'English')
@@ -49,15 +54,9 @@ class ModuleSeeder extends Seeder {
 			'locale_id'				=> $locale_id // English ID
 		]);
 
-// Insert Permissions
 		if (Schema::hasTable('menulinks'))
 		{
-
-// Create Link
-		DB::table('menulinks')->insert( $link_names );
-// Create Link Translation
-		DB::table('menulink_translations')->insert( $ink_name_trans );
-
+			DB::table('menulink_translations')->insert( $ink_name_trans );
 		}
 
 
