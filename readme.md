@@ -55,4 +55,3 @@ https://github.com/illuminate3/rakkoII
 
 ## Screen Shots
 ## Thanks
-## Partial Code or Ideas

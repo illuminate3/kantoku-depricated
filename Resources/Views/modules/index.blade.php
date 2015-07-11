@@ -73,7 +73,7 @@ oTable =
 						<i class="fa fa-pencil fa-fw"></i>
 						{{ trans('kotoba::button.edit') }}
 					</a>
-					<a href="{{ URL::to('welcome/' . $module['slug'] . '/' ) }}" class="btn btn-info" >
+					<a href="{{ URL::to($module['slug'] . '/welcome' ) }}" class="btn btn-info" >
 						<i class="fa fa-search fa-fw"></i>
 						{{ trans("kotoba::button.view") }}
 					</a>
