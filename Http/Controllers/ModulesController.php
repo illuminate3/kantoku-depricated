@@ -3,7 +3,6 @@
 namespace App\Modules\Kantoku\Http\Controllers;
 
 use App\Modules\Kantoku\Http\Requests\DeleteRequest;
-//use App\Modules\Kantoku\Http\Requests\ModuleCreateRequest;
 use App\Modules\Kantoku\Http\Requests\ModuleUpdateRequest;
 
 use Cache;
@@ -15,24 +14,13 @@ use Module;
 class ModulesController extends KantokuController {
 
 
-/*
-{!! Module::asset('moduleslug::css/bootstrap.css') !!}
-{!! Module::asset('moduleslug::js/bootstrap.js') !!}
-Module::view('modules.yourmodule.your.view')
-*/
-
-	/**
-	 * Create a new UserController instance.
-	 *
-	 * @param  App\Modules\Kagi\Http\Domain\Repositories\ModuleRepository $module
-	 * @return void
-	 */
 	public function __construct()
 	{
 // middleware
 // 		$this->middleware('auth');
 // 		$this->middleware('admin');
 	}
+
 
 	/**
 	 * Display a listing of the resource.
@@ -41,59 +29,17 @@ Module::view('modules.yourmodule.your.view')
 	 */
 	public function index()
 	{
-// dd("loaded");
 
 //		$activeModule				= Module::getActive();
 		$modules					= Module::all();
-// dd($modules);
-// // $moduleProperties = Module::getProperties('Jinji');
-// // dd($moduleProperties);
-//
-// //dd(file_get_contents(Config::get('modules.path', public_path('Modules')) . '/' . 'Jinji' . '/module.json'));
-//
-// //		$collection = new \Illuminate\Support\Collection();
-// 		foreach ($modules as $module) {
-// // 			$json_string = Config::get('modules.path', public_path('Modules')) . '/' . $module . '/module.json';
-// // 			$jsondata = file_get_contents($json_string);
-// $moduleProperties = Module::getProperties($module);
-//
-// //$moduleProperties = array_merge($moduleProperties, $moduleProperties);
-//
-//
-// //			$collection[$module] = json_decode($moduleProperties, true);
-// //			$collection[$module] = $moduleProperties;
-// 		}
-// dd($moduleProperties);
-
-
-// dd($collection);
-// dd($collection['moduleSkeleton']['slug']);
-// foreach ($modules as $module) {
-//
-// $slug_property = $module . '::slug';
-// //dd($slug_property);
-//
-// //dd(Module::getProperty($slug_property, trans('kotoba::general.error.no_data') . ':' . trans('kotoba::general.slug')));
-//
-// $slug = Module::getProperty($slug_property, trans('kotoba::general.error.no_data') . ':' . trans('kotoba::general.slug'));
-// print_r($slug);
-//
-// }
-// dd($slug);
-//
-//
-//
-// dd($modules);
 
 		return View('kantoku::modules.index',
 			compact(
 // 				'activeModule',
-// 				'collection',
 				'modules'
 			));
-
-
 	}
+
 
 	/**
 	 * Show the form for creating a new resource.
@@ -102,10 +48,9 @@ Module::view('modules.yourmodule.your.view')
 	 */
 	public function create()
 	{
-dd("create");
-//		return view('kagi::users.create', $this->user->create());
-		return view('kantoku::modules.create');
+		//
 	}
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -118,11 +63,9 @@ dd("create");
 		UserCreateRequest $request
 		)
 	{
-dd("store");
-		$this->user->store($request->all());
-
-		return redirect('user')->with('ok', trans('back/users.created'));
+		//
 	}
+
 
 	/**
 	 * Display the specified resource.
@@ -132,9 +75,9 @@ dd("store");
 	 */
 	public function show($id)
 	{
-dd("show");
-		return View('kantoku::modules.show',  $this->module->show($id));
+		//
 	}
+
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -144,10 +87,6 @@ dd("show");
 	 */
 	public function edit($module)
 	{
-//dd("edit");
-//		$module = $this->moduleRepo->edit($slug);
-//		return View('kantoku::modules.edit',  $this->module->edit($id));
-
 
 //		$activeModule				= Module::getActive();
 		$name						= Module::getProperty( $module . '::name', trans('kotoba::general.error.no_data') . ':' . trans('kotoba::general.name'));
@@ -177,6 +116,7 @@ dd("show");
 				'order'
 			));
 	}
+
 
 	/**
 	 * Update the specified resource in storage.
@@ -218,6 +158,7 @@ dd("show");
 		return redirect('admin/modules');
 	}
 
+
 	/**
 	 * Remove the specified resource from storage.
 	 *
@@ -229,10 +170,7 @@ dd("show");
 		$id
 		)
 	{
-dd("destroy");
-		$this->user->destroy($id);
-
-		return redirect('user')->with('ok', trans('back/users.destroyed'));
+		//
 	}
 
 
