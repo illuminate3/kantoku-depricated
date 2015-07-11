@@ -22,6 +22,30 @@ Manage Modules
 * /admin/modules
 
 
+## Install
+
+### migration commands
+
+```
+php artisan module:migrate Kantoku
+php artisan module:seed Kantoku
+```
+
+
+### publish commands
+
+General Publish "ALL" method
+```
+php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider"
+```
+
+Specific Publish tags
+```
+php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="configs"
+php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="views"
+```
+
+
 ## Packages
 
 Intended to be used with:

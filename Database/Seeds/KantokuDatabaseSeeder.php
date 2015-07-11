@@ -15,7 +15,7 @@ class KantokuDatabaseSeeder extends Seeder
 	{
 		Model::unguard();
 
-		// $this->call('App\Modules\Kantoku\Database\Seeds\FoobarTableSeeder');
+		$this->call('App\Modules\Kantoku\Database\Seeds\ModuleSeeder');
 	}
 
 }
