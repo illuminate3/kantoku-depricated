@@ -49,6 +49,7 @@ class KantokuServiceProvider extends ServiceProvider
 
 		$this->publishes([
 			__DIR__.'/../Config/kantoku.php' => config_path('kantoku.php'),
+ 			__DIR__ . '/../Resources/Assets/Images' => base_path('public/assets/images/'),
 			__DIR__ . '/../Resources/Views/' => public_path('themes/' . Theme::getActive() . '/views/modules/kantoku/'),
 		]);
 
@@ -56,6 +57,10 @@ class KantokuServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__.'/../Config/kantoku.php' => config_path('kantoku.php'),
 		], 'configs');
+
+		$this->publishes([
+ 			__DIR__ . '/../Resources/Assets/Images' => base_path('public/assets/images/'),
+		], 'images');
 
 		$this->publishes([
 			__DIR__ . '/../Resources/Views/' => public_path('themes/' . Theme::getActive() . '/views/modules/kantoku/'),

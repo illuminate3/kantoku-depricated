@@ -42,6 +42,7 @@ php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServ
 Specific Publish tags
 ```
 php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="configs"
+php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="images"
 php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="views"
 ```
 
