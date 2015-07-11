@@ -11,9 +11,13 @@
 // Resources
 // Controllers
 
-Route::get('welcome/kantoku', array(
-	'uses'=>'KantokuController@welcome'
-	));
+
+Route::group(['prefix' => 'kantoku'], function() {
+	Route::get('welcome', [
+		'uses'=>'KantokuController@welcome'
+	]);
+});
+
 
 // API DATA
 
@@ -45,9 +49,3 @@ Route::group(['prefix' => 'admin'], function() {
 
 });
 // --------------------------------------------------------------------------
-
-Route::group(['prefix' => 'kantoku'], function() {
-	Route::get('/', function() {
-		dd('This is the Kantoku module index page.');
-	});
-});

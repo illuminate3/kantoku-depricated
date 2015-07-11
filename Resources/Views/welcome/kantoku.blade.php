@@ -20,7 +20,14 @@
 
 	<div class="container">
 		<div class="content">
-			<div class="title">Kantoku</div>
+			<a href="/">
+				<img src="/assets/images/kantoku.gif">
+			</a>
+			<div class="title">
+				<a href="/">
+					Kantoku
+				</a>
+			</div>
 			<div class="quote">
 				Kantoku is a Rakko module that provides the ability to manage modules
 			</div>
