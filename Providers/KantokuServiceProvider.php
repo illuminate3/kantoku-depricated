@@ -1,14 +1,19 @@
 <?php
 namespace App\Modules\Kantoku\Providers;
 
+use Illuminate\Support\ServiceProvider;
+
 use App;
 use Config;
 use Lang;
+use Theme;
 use View;
-use Illuminate\Support\ServiceProvider;
+
 
 class KantokuServiceProvider extends ServiceProvider
 {
+
+
 	/**
 	 * Register the Kantoku module service provider.
 	 *
@@ -86,3 +91,5 @@ class KantokuServiceProvider extends ServiceProvider
 // 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 	}
 
+
+}
