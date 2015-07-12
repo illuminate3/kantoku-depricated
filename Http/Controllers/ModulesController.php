@@ -9,6 +9,7 @@ use Cache;
 use Config;
 use Flash;
 use Module;
+use Theme;
 
 
 class ModulesController extends KantokuController {
@@ -33,7 +34,7 @@ class ModulesController extends KantokuController {
 //		$activeModule				= Module::getActive();
 		$modules					= Module::all();
 
-		return View('kantoku::modules.index',
+		return Theme::View('kantoku::modules.index',
 			compact(
 // 				'activeModule',
 				'modules'
@@ -104,7 +105,7 @@ class ModulesController extends KantokuController {
 		}
 //dd($checked);
 
-		return View('kantoku::modules.edit',
+		return Theme::View('kantoku::modules.edit',
 			compact(
 // 				'activeModule',
 				'checked',
