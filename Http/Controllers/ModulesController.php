@@ -17,8 +17,9 @@ class ModulesController extends KantokuController {
 
 	public function __construct()
 	{
+		parent::__construct();
 // middleware
-		$this->middleware('auth');
+// 		$this->middleware('auth');
 // 		$this->middleware('admin');
 	}
 
