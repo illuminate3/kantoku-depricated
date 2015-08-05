@@ -13,7 +13,6 @@ use View;
 class KantokuServiceProvider extends ServiceProvider
 {
 
-
 	/**
 	 * Register the Kantoku module service provider.
 	 *
@@ -29,6 +28,7 @@ class KantokuServiceProvider extends ServiceProvider
 		$this->registerProviders();
 	}
 
+
 	/**
 	 * Register the Origami module resource namespaces.
 	 *
@@ -38,6 +38,7 @@ class KantokuServiceProvider extends ServiceProvider
 	{
 		View::addNamespace('kantoku', realpath(__DIR__.'/../Resources/Views'));
 	}
+
 
 	/**
 	 * Boot the service provider.
@@ -52,7 +53,6 @@ class KantokuServiceProvider extends ServiceProvider
  			__DIR__ . '/../Resources/Assets/Images' => base_path('public/assets/images/'),
 			__DIR__ . '/../Resources/Views/' => public_path('themes/' . Theme::getActive() . '/views/modules/kantoku/'),
 		]);
-
 
 		$this->publishes([
 			__DIR__.'/../Config/kantoku.php' => config_path('kantoku.php'),
@@ -80,6 +80,5 @@ class KantokuServiceProvider extends ServiceProvider
 
 		$app->register('App\Modules\Kantoku\Providers\RouteServiceProvider');
 	}
-
 
 }

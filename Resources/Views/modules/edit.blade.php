@@ -14,7 +14,6 @@
 @section('inline-scripts')
 @stop
 
-
 {{-- Content --}}
 @section('content')
 
@@ -32,43 +31,36 @@
 </h1>
 </div>
 
-
 <div class="row">
 {!! Form::open([
 	'route' => array('modules.update', $slug)
 ]) !!}
 {{-- Form::hidden('activeModule', $activeModule) --}}
 
-
 	<div class="form-group">
 		<label for="name">{{ trans('kotoba::general.name') }}</label>
 		<input type="text" class="form-control" name="name" id="name" value="{{ $name }}" autofocus="autofocus">
 	</div>
-
 
 	<div class="form-group">
 		<label for="slug">{{ trans('kotoba::general.slug') }}</label>
 		<input type="text" class="form-control" name="slug" id="slug" value="{{ $slug }}">
 	</div>
 
-
 	<div class="form-group">
 		<label for="description">{{ trans('kotoba::general.description') }}</label>
 		<input type="text" class="form-control" name="description" id="description" value="{{ $description }}">
 	</div>
-
 
 	<div class="form-group">
 		<label for="version">{{ trans('kotoba::general.version') }}</label>
 		<input type="text" class="form-control" name="version" id="version" value="{{ $version }}">
 	</div>
 
-
 	<div class="form-group">
 		<label for="order">{{ trans('kotoba::general.order') }}</label>
 		<input type="text" class="form-control" name="order" id="order" value="{{ $order }}">
 	</div>
-
 
 	<label class="checkbox-inline">
 		<input type="checkbox" id="enabled" name="enabled" value="1" {{ $checked }}>
@@ -77,9 +69,7 @@
 
 </div>
 
-
 <hr>
-
 
 <div class="row">
 <div class="col-sm-12">
@@ -102,10 +92,8 @@
 </div>
 </div>
 
-
 {!! Form::close() !!}
 
 </div> <!-- ./ row -->
-
 
 @stop

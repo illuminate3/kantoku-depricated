@@ -14,7 +14,6 @@ use Theme;
 
 class ModulesController extends KantokuController {
 
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -174,6 +173,5 @@ class ModulesController extends KantokuController {
 	{
 		//
 	}
-
 
 }

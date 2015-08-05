@@ -24,7 +24,6 @@ oTable =
 @stop
 
 
-
 {{-- Content --}}
 @section('content')
 
@@ -35,7 +34,6 @@ oTable =
 	<hr>
 </h1>
 </div>
-
 
 @if (count($modules))
 
@@ -84,7 +82,6 @@ oTable =
 </table>
 </div>
 
-
 @else
 <div class="alert alert-info">
 </div>
@@ -92,7 +89,6 @@ oTable =
 @endif
 </div>
 @stop
-
 
 
 @stop

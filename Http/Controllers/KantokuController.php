@@ -13,7 +13,6 @@ use Theme;
 class KantokuController extends Controller
 {
 
-
 	use DispatchesJobs, ValidatesRequests;
 
 	/**
@@ -38,6 +37,5 @@ class KantokuController extends Controller
 	{
 		return Theme::View('modules.kantoku.welcome.kantoku');
 	}
-
 
 }

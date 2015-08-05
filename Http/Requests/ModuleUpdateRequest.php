@@ -7,7 +7,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ModuleUpdateRequest extends FormRequest {
 
-
 	/**
 	 * Determine if the user is authorized to make this request.
 	 *
@@ -17,6 +16,7 @@ class ModuleUpdateRequest extends FormRequest {
 	{
 		return true;
 	}
+
 
 	/**
 	 * Get the validation rules that apply to the request.
@@ -29,6 +29,5 @@ class ModuleUpdateRequest extends FormRequest {
 //			'slug'						=> 'required|alpha_num',
 		];
 	}
-
 
 }

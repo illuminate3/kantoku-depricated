@@ -4,6 +4,7 @@ namespace App\Modules\Kantoku\Database\Seeds;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+
 class KantokuDatabaseSeeder extends Seeder
 {
 	/**

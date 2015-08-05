@@ -2,7 +2,6 @@
 
 // php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="config"
 
-
 return [
 
 /*
