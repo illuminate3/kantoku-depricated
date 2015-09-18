@@ -7,28 +7,26 @@ Use DB;
 use Schema;
 
 
-class ModuleSeeder extends Seeder {
+class ModuleSeeder extends Seeder
+{
+
 
 	public function run()
 	{
 
-// Permissions -------------------------------------------------------------
-		$permissions = array(
-			[
-				'name'				=> 'Manage Modules',
-				'slug'				=> 'manage_kantoku',
-				'description'		=> 'Give permission to user to access the Module Management area.'
-			],
-		 );
+		$admin_id = DB::table('menus')
+			->where('name', '=', 'admin')
+			->pluck('id');
 
-		if (Schema::hasTable('permissions'))
-		{
-			DB::table('permissions')->insert( $permissions );
+		if ($admin_id == null) {
+			$admin_id = 1;
 		}
 
+
 // Links -------------------------------------------------------------------
+// modules
 		$link_names = array([
-			'menu_id'				=> 1, // admin menu
+			'menu_id'				=> $admin_id, // admin menu
 			'position'				=> 7,
 		]);
 
@@ -57,5 +55,6 @@ class ModuleSeeder extends Seeder {
 		}
 
 	} // run
+
 
 }

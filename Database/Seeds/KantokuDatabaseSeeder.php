@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class KantokuDatabaseSeeder extends Seeder
 {
+
+
 	/**
 	 * Run the database seeds.
 	 *
@@ -16,7 +18,10 @@ class KantokuDatabaseSeeder extends Seeder
 	{
 		Model::unguard();
 
-		$this->call('App\Modules\Kantoku\Database\Seeds\ModuleSeeder');
+		$this->call('App\Modules\Kantoku\Database\Seeds\ModuleLinksSeeder');
+		$this->call('App\Modules\Kantoku\Database\Seeds\ModulePermissionsSeeder');
+
 	}
+
 
 }
