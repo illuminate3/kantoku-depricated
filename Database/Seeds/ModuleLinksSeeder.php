@@ -27,6 +27,7 @@ class ModuleLinksSeeder extends Seeder
 // modules
 		$link_names = array([
 			'menu_id'				=> $admin_id, // admin menu
+			'status'				=> 1,
 			'position'				=> 7,
 		]);
 
@@ -42,7 +43,6 @@ class ModuleLinksSeeder extends Seeder
 			->pluck('id');
 
 		$ink_name_trans = array([
-			'status'				=> 1,
 			'title'					=> 'Modules',
 			'url'					=> '/admin/modules',
 			'menulink_id'			=> $last_insert_id,
