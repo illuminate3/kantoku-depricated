@@ -27,8 +27,8 @@ class ModuleLinksSeeder extends Seeder
 // modules
 		$link_names = array([
 			'menu_id'				=> $admin_id, // admin menu
-			'status'				=> 1,
-			'position'				=> 7,
+			'status_id'				=> 1,
+			'position'				=> 7
 		]);
 
 		if (Schema::hasTable('menulinks'))
@@ -44,6 +44,7 @@ class ModuleLinksSeeder extends Seeder
 
 		$ink_name_trans = array([
 			'title'					=> 'Modules',
+			'status'				=> 1,
 			'url'					=> '/admin/modules',
 			'menulink_id'			=> $last_insert_id,
 			'locale_id'				=> $locale_id // English ID
