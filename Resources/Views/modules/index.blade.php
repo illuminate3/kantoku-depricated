@@ -88,8 +88,6 @@ oTable =
 </div>
 	{{ trans('kotoba::general.error.not_found') }}
 @endif
-</div>
-@stop
 
 
 @stop
